@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class Atomic01 {
 
-    //原子性
+    /**原子性*/
     private static AtomicInteger count = new AtomicInteger(0);
 
     /**

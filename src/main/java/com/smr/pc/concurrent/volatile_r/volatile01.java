@@ -8,7 +8,8 @@ package com.smr.pc.concurrent.volatile_r;
 class volatile01 extends Thread {
 
 //    private boolean flag = true;
-    private volatile boolean flag= true;//可见性
+    /**可见性*/
+    private volatile boolean flag= true;
 
     @Override
     public void run() {
@@ -30,7 +31,7 @@ class volatile01 extends Thread {
 
         volatile01 thread = new volatile01();
         thread.start();
-        thread.sleep(3000);
+        Thread.sleep(3000);
 
         //主线程 延时3s将 flag改为false
         thread.setFlag(false);

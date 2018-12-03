@@ -2,6 +2,7 @@ package com.smr.pc.concurrent.deadlock;
 
 /**
  * 死锁
+ * @author QJ
  */
 public class DeadLock01 {
 

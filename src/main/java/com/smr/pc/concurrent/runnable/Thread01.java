@@ -7,7 +7,8 @@ package com.smr.pc.concurrent.runnable;
  */
 class Thread01 extends Thread {
 
-    private int count = 10;//不能实现共享资源
+    /**不能实现共享资源*/
+    private int count = 10;
 
     @Override
     public void run() {
@@ -23,7 +24,7 @@ class Thread01 extends Thread {
     }
 
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         Thread01 tp1 = new Thread01();
         tp1.setName("线程1");

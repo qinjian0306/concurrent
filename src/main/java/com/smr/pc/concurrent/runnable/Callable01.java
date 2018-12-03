@@ -2,15 +2,18 @@ package com.smr.pc.concurrent.runnable;
 
 import java.util.concurrent.*;
 
+/**
+ * @author QJ
+ */
 public class Callable01 implements Callable<String> {
     @Override
-    public String call() throws Exception {
+    public String call(){
         return "Callable test01 .. ";
     }
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
+    public static void main(String[] args){
 
-        ConcurrentHashMap<Integer, Integer> map = new ConcurrentHashMap<>();
+        ConcurrentHashMap<Integer, Integer> map = new ConcurrentHashMap<>(16);
 //
 //        FutureTask task = new FutureTask(new Callable01());
 //        new Thread(task).start();

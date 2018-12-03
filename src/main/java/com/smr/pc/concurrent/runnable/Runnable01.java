@@ -7,7 +7,8 @@ package com.smr.pc.concurrent.runnable;
  */
 class Runnable01 implements Runnable {
 
-    private int count = 10;//能实现共享资源
+    /**能实现共享资源*/
+    private static int count = 10;
 
     @Override
     public void run() {
@@ -16,7 +17,7 @@ class Runnable01 implements Runnable {
         }
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         Runnable01 runnable = new Runnable01();
 

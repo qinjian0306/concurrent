@@ -9,7 +9,6 @@ import java.util.concurrent.Executors;
  * @author QJ
  */
 public class ExecutorManager {
-
     private static final transient int cores;
 
     private ExecutorManager() {
