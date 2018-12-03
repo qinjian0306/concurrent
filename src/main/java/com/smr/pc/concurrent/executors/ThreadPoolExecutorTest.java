@@ -26,18 +26,18 @@ import java.util.concurrent.TimeUnit;
 public class ThreadPoolExecutorTest {
 
 
-    //池中所保存的核心线程数，包括空闲线程。
+    /**池中所保存的核心线程数，包括空闲线程*/
     private final transient static int corePoolSize = 5;
-    //池中允许的最大线程数。
+    /**池中允许的最大线程数*/
     private final transient static int maximumPoolSize = 10;
-    //当线程数大于核心线程时，此为终止前多余的空闲线程等待新任务的最长时间
+    /**当线程数大于核心线程时，此为终止前多余的空闲线程等待新任务的最长时间*/
     private final static long keepAliveTime = 200;
-    //执行前用于保持任务的队列5，即任务缓存队列
+    /**执行前用于保持任务的队列5，即任务缓存队列*/
     final static ArrayBlockingQueue<Runnable> workQueue = new ArrayBlockingQueue<Runnable>(5);
 
     public static void main(String[] args) {
 
-        //构建一个线程池，正常线程数量为5，最大线程数据为10，等待时间200
+        /**构建一个线程池，正常线程数量为5，最大线程数据为10，等待时间200*/
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime,
                 TimeUnit.MINUTES, workQueue, new ThreadPoolExecutor.AbortPolicy());
 
@@ -50,7 +50,7 @@ public class ThreadPoolExecutorTest {
 
                 System.out.println("正在执行的任务 [" + name + "] " + currentTask);
                 try {
-                    Thread.currentThread().sleep(3000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {
                 }
                 System.out.println("任务 [" + name + "] " + currentTask + "执行完毕");

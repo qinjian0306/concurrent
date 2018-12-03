@@ -6,6 +6,7 @@ import java.util.concurrent.Executors;
 
 /**
  * 静态内部类单例模式创建线程池
+ * @author QJ
  */
 public class ExecutorManager {
 
@@ -23,7 +24,8 @@ public class ExecutorManager {
     }
 
     static {
-        cores = Runtime.getRuntime().availableProcessors();//服务器核数
+        // 服务器核数
+        cores = Runtime.getRuntime().availableProcessors();
     }
 
 
